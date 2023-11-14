@@ -5,7 +5,7 @@ on:
 
 jobs:
   echo_1:
-    runs_on: [ubuntu_latest]
+    runs-on: [ubuntu_latest]
     steps:
       - name: Set the value
         id: step_one
