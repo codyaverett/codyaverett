@@ -1,0 +1,17 @@
+{
+  "ignore": [
+    ".git",
+    ".vscode",
+    "node_modules",
+    "target",
+    ".DS_Store"
+  ],
+  "projects": {
+    "memento": "git@github.com:codyaverett/memento.git"
+  },
+  "plugins": null,
+  "nested": null,
+  "aliases": null,
+  "scripts": null,
+  "worktree_init": null
+}

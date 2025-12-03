@@ -1,0 +1,6 @@
+# Meta repository ignores
+.DS_Store
+*.log
+node_modules/
+target/
+memento

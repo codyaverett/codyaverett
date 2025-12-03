@@ -68,12 +68,12 @@ jobs:
           base: activity, community
           config_timezone: ${{ secrets.USER_TIMEZONE }}
 
-  iso_calender:
+  iso_calendar:
     runs-on: ubuntu-latest
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          filename: iso_calender.svg
+          filename: iso_calendar.svg
           # You'll need to setup a personal token in your secrets.
           token: ${{ secrets.METRICS_SECRET }}
           # GITHUB_TOKEN is a special auto-generated token used for commits
