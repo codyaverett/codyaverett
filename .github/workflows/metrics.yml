@@ -11,7 +11,8 @@ jobs:
   achievements:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      # Using fork with Projects V2 fix (see: https://github.com/lowlighter/metrics/issues/1706)
+      - uses: stalomeow/metrics@projects-v2
         with:
           filename: achievements.svg
           token: ${{ secrets.METRICS_SECRET }}
@@ -90,7 +91,8 @@ jobs:
   habits:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      # Using community fork for potential bug fixes
+      - uses: gh-metrics/metrics@master
         with:
           filename: github-habits.svg
           token: ${{ secrets.METRICS_SECRET }}
