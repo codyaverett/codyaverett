@@ -1,7 +1,7 @@
 # Hi, I'm Cody Averett
 
-I'm a creative software engineer that likes exploring the great unknown while working within constraints. 
-I have 15+ years professional experience across large enterprises as well as small startups. 
+I'm a creative software engineer that likes exploring the great unknown while working within constraints.<br />
+I have 15+ years professional experience across large enterprises as well as small startups. <br />
 I love learning and helping others maximize their own potentials.
 
 ### Technologies
