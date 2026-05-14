@@ -123,7 +123,14 @@ jobs:
           template: classic
           base: ""
           config_timezone: ${{ secrets.USER_TIMEZONE }}
+          # Widen scope so issues/PRs from org repos (e.g. galaxy-gateway) and
+          # repos where I'm a collaborator are counted, not just repos I own.
+          repositories_affiliations: owner, collaborator, organization_member
+          repositories_forks: yes
           plugin_followup: yes
+          # `user` section uses GitHub's user-wide issue/PR search across every
+          # repo I've authored in, regardless of affiliation.
+          plugin_followup_sections: repositories, user
           plugin_languages: yes
 
 
