@@ -47,6 +47,11 @@ def pipeline_count():
 def days_since_human_edit(now):
     last = run(["git", "-C", str(ROOT), "log", "-1", "--format=%cI",
                 f"--author={HUMAN_AUTHOR}"])
+    if not last:
+        raise SystemExit(
+            f"no commit by {HUMAN_AUTHOR} in history — shallow clone? "
+            "use fetch-depth: 0"
+        )
     return (now - datetime.fromisoformat(last)).days
 
 
