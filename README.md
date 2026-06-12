@@ -1,6 +1,6 @@
 # Hi, I'm Cody Averett
 
-I'm a creative software engineer that likes exploring the great unknown while working within constraints.<br />
+I'm a creative software engineer who likes exploring the great unknown while working within constraints.<br />
 I have 15+ years professional experience across large enterprises as well as small startups. <br />
 I love learning and helping others maximize their own potentials.
 
@@ -18,6 +18,22 @@ I love learning and helping others maximize their own potentials.
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
 
+
+## Featured Projects
+
+<!-- featured:start -->
+### [metarepo](https://github.com/codyaverett/metarepo)
+Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool. _Stack: rust, cli_
+<sub>last commit 2026-06-11 · 89 days until cull</sub>
+
+### [mathcraft](https://github.com/galaxy-gateway/mathcraft)
+Mathematical concepts as runnable TypeScript examples, foundations to the bleeding edge. _Stack: typescript, deno_
+<sub>last commit 2026-04-12 · 29 days until cull</sub>
+
+_1 slot open. Slots are earned, not filled._
+
+<sub>Max 3 slots. 90 days without my commits on the default branch gets a project culled — automatically, in public. Mechanism: [featured.toml](featured.toml) + [decay workflow](.github/workflows/decay.yml).</sub>
+<!-- featured:end -->
 
 ## GitHub Stats
 
@@ -40,19 +56,7 @@ I love learning and helping others maximize their own potentials.
   <img align="center" width="49%" src="./iso_calendar.svg" />
 </a>
 
-<!-- <a href="https://github.com/codyaverett">
-  <img align="center" width="49%" src="./lines-of-code.svg" />
-</a> -->
-
-<!-- <a href="https://github.com/codyaverett">
-  <img align="center" width="49%" src="./repositories.svg" />
-</a> -->
-
 <a href="https://github.com/codyaverett">
   <img align="center" width="49%" src="./achievements.svg" />
 </a>
-
-<!-- <a href="https://github.com/codyaverett">
-  <img align="center" width="49%" src="./github-habits.svg" />
-</a> -->
 

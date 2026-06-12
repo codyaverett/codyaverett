@@ -1,0 +1,43 @@
+# Candidate pool for the decay-driven Featured Projects section.
+#
+# Slots are earned, not granted: a candidate needs author commits on its
+# default branch within the last `window_days`. The top `max_slots` by recent
+# activity render in README.md; everyone else waits in this file. A slotted
+# project that goes quiet is publicly culled with a tombstone.
+#
+# Rendering is done by scripts/featured.py, weekly via .github/workflows/decay.yml.
+# Only public repos belong here — private repos 404 for profile visitors.
+
+max_slots = 3
+window_days = 90
+author = "codyaverett"
+
+[[project]]
+name = "metarepo"
+repo = "codyaverett/metarepo"
+pitch = "Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool."
+stack = "rust, cli"
+
+[[project]]
+name = "mathcraft"
+repo = "galaxy-gateway/mathcraft"
+pitch = "Mathematical concepts as runnable TypeScript examples, foundations to the bleeding edge."
+stack = "typescript, deno"
+
+[[project]]
+name = "wasm-container"
+repo = "codyaverett/wasm-container"
+pitch = "Experimental container runtime that executes Docker-compatible images inside WebAssembly."
+stack = "rust, wasm"
+
+[[project]]
+name = "viz-code"
+repo = "codyaverett/viz-code"
+pitch = "Static analysis that renders any codebase as Mermaid.js architecture diagrams."
+stack = "rust, cli"
+
+[[project]]
+name = "video-chat"
+repo = "codyaverett/video-chat"
+pitch = "Peer-to-peer WebRTC video chat over WebSockets, served by Deno."
+stack = "typescript, deno, webrtc"

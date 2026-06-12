@@ -6,7 +6,7 @@ TOP ?= 10
 SCAN := scripts/scan-projects.sh
 REPORT := scripts/projects-report.md
 
-.PHONY: help scan scan-json report show-report featured clean-report metrics-trigger metrics-status preview lint check
+.PHONY: help scan scan-json report show-report featured featured-write clean-report metrics-trigger metrics-status preview lint check
 
 help: ## Show this help (default target)
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n\nTargets:\n"} \
@@ -30,11 +30,11 @@ show-report: ## Print the current report to stdout
 	@test -f $(REPORT) || { echo "no report yet — run: make scan" >&2; exit 1; }
 	@cat $(REPORT)
 
-featured: ## Reminder: invoke the curate-featured-projects skill in Claude Code
-	@echo "Run the 'curate-featured-projects' skill in Claude Code, or:"
-	@echo "  1) make scan"
-	@echo "  2) review $(REPORT)"
-	@echo "  3) edit the Featured Projects section of README.md"
+featured: ## Preview the decay-driven Featured Projects render (dry run)
+	@python3 scripts/featured.py
+
+featured-write: ## Apply the Featured Projects render to README.md + state file
+	@python3 scripts/featured.py --write
 
 clean-report: ## Remove the generated projects report
 	@rm -f $(REPORT)
