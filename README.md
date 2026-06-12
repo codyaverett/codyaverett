@@ -60,3 +60,9 @@ _1 slot open. Slots are earned, not filled._
   <img align="center" width="49%" src="./achievements.svg" />
 </a>
 
+---
+
+<!-- ops:start -->
+<sub>Profile maintained by 3 automated pipelines · last human edit 0 days ago · metrics: 100% success over last 30 runs · $0.00 inference this month (no inference pipelines… yet) · last incident: none on record · ledger: <code>git log --format='%h %(trailers:key=Workflow,valueonly)'</code></sub>
+<!-- ops:end -->
+

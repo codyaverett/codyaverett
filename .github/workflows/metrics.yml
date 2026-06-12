@@ -1,152 +1,107 @@
 name: Metrics
+
+# Renders the five dashboard SVGs the README actually displays, then lands
+# them as ONE GitHub-signed (Verified) commit via the GraphQL
+# createCommitOnBranch API — no committer key management, no per-card commit
+# spam, and `git log --format='%(trailers)' -- '*.svg'` is a queryable
+# ledger of everything the automation did.
+#
+# History: this used to be 8 independent jobs that each committed its own
+# SVG (up to 8 racing bot commits per run). See docs/ops/README.md.
+
 on:
-  # Schedule updates (each hour)
-  schedule: [{cron: "0 0 * * *"}]
-  # Lines below let you run workflow manually and on each commit (optional)
+  schedule:
+    - cron: "0 0 * * *" # daily 00:00 UTC
   workflow_dispatch:
-  push: {branches: ["main"]}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: metrics
+  cancel-in-progress: false
 
 jobs:
-
-  achievements:
+  render:
     runs-on: ubuntu-latest
     steps:
-      # Using fork with Projects V2 fix (see: https://github.com/lowlighter/metrics/issues/1706)
-      - uses: stalomeow/metrics@projects-v2
-        with:
-          filename: achievements.svg
-          token: ${{ secrets.METRICS_SECRET }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          user: codyaverett
-          base: achievements
-          plugin_achievements: yes
-          plugin_achievements_threshold: B      # Display achievements with rank B or higher
-          plugin_achievements_secrets: yes      # Display unlocked secrets achievements
-          plugin_achievements_display: compact  # Use compact display
-          plugin_achievements_limit: 0          # Display all unlocked achievements (no limit)
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-  github-metrics:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
+      - name: Render header
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           filename: header.svg
-          # You'll need to setup a personal token in your secrets.
           token: ${{ secrets.METRICS_SECRET }}
-          # GITHUB_TOKEN is a special auto-generated token used for commits
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-
-          # Options
           user: codyaverett
           template: classic
           base: header
-          config_timezone: ${{ secrets.USER_TIMEZONE }}
-  lines:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: lines-of-code.svg
-          token: ${{ secrets.METRICS_SECRET }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          base: "repositories"
-          plugin_lines: yes
+          config_timezone: America/Chicago
+          output_action: none
 
-  acti_comm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: acti_comm.svg
-          # You'll need to setup a personal token in your secrets.
-          token: ${{ secrets.METRICS_SECRET }}
-          # GITHUB_TOKEN is a special auto-generated token used for commits
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-
-          # Options
-          user: codyaverett
-          template: classic
-          base: activity, community
-          config_timezone: ${{ secrets.USER_TIMEZONE }}
-
-  iso_calendar:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          filename: iso_calendar.svg
-          # You'll need to setup a personal token in your secrets.
-          token: ${{ secrets.METRICS_SECRET }}
-          # GITHUB_TOKEN is a special auto-generated token used for commits
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-
-          # Options
-          user: codyaverett
-          template: classic
-          base: ""
-          config_timezone: ${{ secrets.USER_TIMEZONE }}
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-  habits:
-    runs-on: ubuntu-latest
-    steps:
-      # Using community fork for potential bug fixes
-      - uses: gh-metrics/metrics@master
-        with:
-          filename: github-habits.svg
-          token: ${{ secrets.METRICS_SECRET }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          config_timezone: ${{ secrets.USER_TIMEZONE }} # Set timezone
-          user: codyaverett
-          base: ""
-          template: classic
-          plugin_habits: yes
-          plugin_habits_from: 200       # Use 200 events to compute habits
-          plugin_habits_days: 14        # Keep only events from last 14 days
-          plugin_habits_charts: yes     # Display charts section
-          plugin_habits_trim: yes       # Trim unused hours on daily chart
-
-  issue_pr_lang:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
+      - name: Render issues / PRs / languages
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           filename: issue_pr_lang.svg
-          # You'll need to setup a personal token in your secrets.
           token: ${{ secrets.METRICS_SECRET }}
-          # GITHUB_TOKEN is a special auto-generated token used for commits
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-
-          # Options
           user: codyaverett
           template: classic
           base: ""
-          config_timezone: ${{ secrets.USER_TIMEZONE }}
-          # Widen scope so issues/PRs from org repos (e.g. galaxy-gateway) and
-          # repos where I'm a collaborator are counted, not just repos I own.
+          config_timezone: America/Chicago
           repositories_affiliations: owner, collaborator, organization_member
           repositories_forks: yes
           plugin_followup: yes
-          # `user` section uses GitHub's user-wide issue/PR search across every
-          # repo I've authored in, regardless of affiliation.
-          plugin_followup_sections: repositories, user
+          # The `repositories` followup section rendered all zeros for months
+          # (counts issues ON owned repos, which see no traffic) — user-wide
+          # search is the section with signal.
+          plugin_followup_sections: user
           plugin_languages: yes
+          output_action: none
 
-
-  repositories:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
+      - name: Render activity / community
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
-          filename: repositories.svg
-          # You'll need to setup a personal token in your secrets.
+          filename: acti_comm.svg
           token: ${{ secrets.METRICS_SECRET }}
-          # GITHUB_TOKEN is a special auto-generated token used for commits
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-
-          # Options
           user: codyaverett
           template: classic
-          base: repositories
-          config_timezone: ${{ secrets.USER_TIMEZONE }}
+          base: activity, community
+          config_timezone: America/Chicago
+          output_action: none
+
+      - name: Render isometric calendar
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        with:
+          filename: iso_calendar.svg
+          token: ${{ secrets.METRICS_SECRET }}
+          user: codyaverett
+          template: classic
+          base: ""
+          config_timezone: America/Chicago
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+          output_action: none
+
+      - name: Render achievements
+        # Fork with Projects V2 fix (https://github.com/lowlighter/metrics/issues/1706)
+        uses: stalomeow/metrics@4fca5f91c5432c68955ea66a8fa7c6a51f58644e # projects-v2
+        with:
+          filename: achievements.svg
+          token: ${{ secrets.METRICS_SECRET }}
+          user: codyaverett
+          base: achievements
+          plugin_achievements: yes
+          plugin_achievements_threshold: B
+          plugin_achievements_secrets: yes
+          plugin_achievements_display: compact
+          plugin_achievements_limit: 0
+          output_action: none
+
+      - name: Collect renders
+        run: sudo cp /metrics_renders/*.svg .
+
+      - name: Commit renders (verified, with trailers)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          bash scripts/verified-commit.sh
+          "chore(metrics): refresh profile dashboards" '*.svg'
