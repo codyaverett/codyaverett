@@ -24,11 +24,11 @@ I love learning and helping others maximize their own potentials.
 <!-- featured:start -->
 ### [metarepo](https://github.com/codyaverett/metarepo)
 Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool. _Stack: rust, cli_
-<sub>last commit 2026-06-11 · 89 days until cull</sub>
+<sub>last commit 2026-06-12 · 87 days until cull</sub>
 
 ### [mathcraft](https://github.com/galaxy-gateway/mathcraft)
 Mathematical concepts as runnable TypeScript examples, foundations to the bleeding edge. _Stack: typescript, deno_
-<sub>last commit 2026-04-12 · 29 days until cull</sub>
+<sub>last commit 2026-04-12 · 26 days until cull</sub>
 
 _1 slot open. Slots are earned, not filled._
 
