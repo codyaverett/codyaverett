@@ -63,6 +63,6 @@ _1 slot open. Slots are earned, not filled._
 ---
 
 <!-- ops:start -->
-<sub>Profile maintained by 3 automated pipelines · last human edit 4 days ago · metrics: 46% success over last 26 runs · $0.00 inference this month (no inference pipelines… yet) · last incident: metrics.yml (2026-06-16, auto-detected, [issue #16](https://github.com/codyaverett/codyaverett/issues/16)) · ledger: <code>git log --format='%h %(trailers:key=Workflow,valueonly)'</code></sub>
+<sub>Profile maintained by 3 automated pipelines · last human edit 5 days ago · metrics: 20% success over last 25 runs · $0.00 inference this month (no inference pipelines… yet) · last incident: metrics.yml (2026-06-17, auto-detected, [issue #22](https://github.com/codyaverett/codyaverett/issues/22)) · ledger: <code>git log --format='%h %(trailers:key=Workflow,valueonly)'</code></sub>
 <!-- ops:end -->
 
