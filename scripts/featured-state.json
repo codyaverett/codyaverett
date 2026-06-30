@@ -2,7 +2,10 @@
   "slots": [
     "galaxyclaw",
     "slacker",
-    "metarepo"
+    "metarepo",
+    "muse",
+    "stable-audio",
+    "tiny-rust"
   ],
   "culls": []
 }

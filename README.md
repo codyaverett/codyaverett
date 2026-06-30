@@ -34,6 +34,18 @@ Chrome extension plus local Rust server that turns Slack web into a queryable fe
 Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool. _Stack: rust, cli_
 ![last commit](https://img.shields.io/github/last-commit/codyaverett/metarepo?style=flat-square&label=updated)
 
+### [muse](https://github.com/galaxy-gateway/muse)
+Terminal music explorer: browse, play, and visualize an audio tree. _Stack: rust, tui_
+![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/muse?style=flat-square&label=updated)
+
+### [stable-audio](https://github.com/galaxy-gateway/stable-audio)
+Music generation with Stability AI's stable-audio model. _Stack: python_
+![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/stable-audio?style=flat-square&label=updated)
+
+### [tiny-rust](https://github.com/codyaverett/tiny-rust)
+Exploring how small a Rust binary can get, one technique at a time. _Stack: rust_
+![last commit](https://img.shields.io/github/last-commit/codyaverett/tiny-rust?style=flat-square&label=updated)
+
 <!-- featured:end -->
 
 ## GitHub Stats
