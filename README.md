@@ -22,25 +22,32 @@ I love learning and helping others maximize their own potentials.
 ## Featured Projects
 
 <!-- featured:start -->
-### [galaxyclaw](https://github.com/galaxy-gateway/galaxyclaw) ![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/galaxyclaw?style=flat-square&label=updated)
+### [galaxyclaw](https://github.com/galaxy-gateway/galaxyclaw)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/galaxy-gateway/galaxyclaw?style=flat-square&label=updated">
 A lean, fast personal AI agent framework written in Rust. Run autonomous agents with a tiny footprint and predictable performance, skipping the heavyweight Python stacks entirely. _Stack: rust_
 
-### [slacker](https://github.com/galaxy-gateway/slacker) ![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/slacker?style=flat-square&label=updated)
+### [slacker](https://github.com/galaxy-gateway/slacker)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/galaxy-gateway/slacker?style=flat-square&label=updated">
 Turns the Slack web app into a queryable, scriptable feed via a Chrome extension and local Rust server. Search, triage, and automate your channels without the official API or its rate limits. _Stack: javascript, rust_
 
-### [metarepo](https://github.com/codyaverett/metarepo) ![last commit](https://img.shields.io/github/last-commit/codyaverett/metarepo?style=flat-square&label=updated)
+### [metarepo](https://github.com/codyaverett/metarepo)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/codyaverett/metarepo?style=flat-square&label=updated">
 Manage a fleet of git repositories as one logical project. A fast Rust rewrite of the Node meta tool that runs commands across many repos at once, so multi-repo work stops being a chore. _Stack: rust, cli_
 
-### [muse](https://github.com/galaxy-gateway/muse) ![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/muse?style=flat-square&label=updated)
+### [muse](https://github.com/galaxy-gateway/muse)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/galaxy-gateway/muse?style=flat-square&label=updated">
 A terminal music explorer that browses a directory tree of audio, plays it, and visualizes it in real time. All the joy of a music player without ever leaving your shell. _Stack: rust, tui_
 
-### [stable-audio](https://github.com/galaxy-gateway/stable-audio) ![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/stable-audio?style=flat-square&label=updated)
+### [stable-audio](https://github.com/galaxy-gateway/stable-audio)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/galaxy-gateway/stable-audio?style=flat-square&label=updated">
 Generate original music locally with Stability AI's stable-audio model. A simple harness that turns text prompts into audio clips on your own machine, no cloud round-trip required. _Stack: python_
 
-### [tiny-rust](https://github.com/codyaverett/tiny-rust) ![last commit](https://img.shields.io/github/last-commit/codyaverett/tiny-rust?style=flat-square&label=updated)
+### [tiny-rust](https://github.com/codyaverett/tiny-rust)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/codyaverett/tiny-rust?style=flat-square&label=updated">
 A hands-on lab for shrinking Rust binaries to the absolute minimum, one technique at a time. A practical reference for anyone who cares about size-optimized, dependency-light builds. _Stack: rust_
 
-### [mathcraft](https://github.com/galaxy-gateway/mathcraft) ![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/mathcraft?style=flat-square&label=updated)
+### [mathcraft](https://github.com/galaxy-gateway/mathcraft)
+<img align="right" alt="last commit" src="https://img.shields.io/github/last-commit/galaxy-gateway/mathcraft?style=flat-square&label=updated">
 Mathematical concepts rendered as runnable TypeScript, from foundations to the bleeding edge. Learn the math by reading and running real code instead of staring at static formulas. _Stack: typescript, deno_
 
 <!-- featured:end -->
