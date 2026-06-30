@@ -6,7 +6,7 @@ TOP ?= 10
 SCAN := scripts/scan-projects.sh
 REPORT := scripts/projects-report.md
 
-.PHONY: help scan scan-json report show-report featured featured-write clean-report metrics-trigger metrics-status ops-status watchdog ledger preview lint check
+.PHONY: help scan scan-json report show-report featured featured-write clean-report metrics-trigger metrics-status watchdog ledger preview lint check
 
 help: ## Show this help (default target)
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n\nTargets:\n"} \
@@ -52,9 +52,6 @@ metrics-status: ## Show recent runs of the metrics workflow
 	@gh run list --workflow=metrics.yml --limit 5
 
 ##@ Ops
-
-ops-status: ## Print the rendered ops status line (dry run)
-	@python3 scripts/ops_status.py
 
 watchdog: ## Run watchdog content assertions (dry run, no side effects)
 	@python3 scripts/watchdog.py

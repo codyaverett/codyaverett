@@ -2,8 +2,8 @@ name: Watchdog
 
 # Offset from the metrics cron by 13 hours: asserts the CONTENT of the
 # rendered dashboard cards (not just that CI was green), self-heals by
-# re-dispatching metrics, quarantines cards that stay broken, and refreshes
-# the ops status line. See docs/ops/README.md and scripts/watchdog.py.
+# re-dispatching metrics, and quarantines cards that stay broken.
+# See docs/ops/README.md and scripts/watchdog.py.
 
 on:
   schedule:
@@ -33,11 +33,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/watchdog.py --write
-
-      - name: Refresh ops status line
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: python3 scripts/ops_status.py --write
 
       - name: Commit changes (verified, with trailers)
         env:

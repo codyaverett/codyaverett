@@ -10,7 +10,7 @@ Green CI is not the bar — correct, fresh, visible content is.
 | Workflow | Schedule | Job |
 |---|---|---|
 | `metrics.yml` | daily 00:00 UTC | Render the 5 displayed dashboard SVGs, land them as ONE verified commit |
-| `watchdog.yml` | daily 13:00 UTC | Content-assert the cards, self-heal, quarantine, refresh ops status line |
+| `watchdog.yml` | daily 13:00 UTC | Content-assert the cards, self-heal, quarantine |
 | `decay.yml` | weekly Mon 06:17 UTC | Featured Projects decay pass (see [featured-projects.md](../featured-projects.md)) |
 
 All third-party actions are SHA-pinned. All scheduled workflows have
@@ -44,18 +44,9 @@ Failure ladder (state in `scripts/watchdog-state.json`):
    display frozen lies.
 3. **Recovery** — card restored, issue auto-closed.
 
-## Status line
-
-`scripts/ops_status.py` renders the line at the bottom of README.md between
-`ops` markers: pipeline count (counted from workflow files with schedules),
-days since last human commit (author-filtered git log), measured success
-rate of the last 30 metrics runs (Actions API), and the most recent
-watchdog incident. None of it is hand-written; all of it is checkable.
-
 ## Operating it
 
 ```sh
-make ops-status       # print the status line (dry run)
 make watchdog         # run assertions locally, no side effects
 make ledger           # automation commits with trailers
 make metrics-trigger  # force a render pass

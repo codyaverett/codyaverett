@@ -77,9 +77,3 @@ Mathematical concepts rendered as runnable TypeScript, from foundations to the b
   <img align="center" width="49%" src="./achievements.svg" />
 </a>
 
----
-
-<!-- ops:start -->
-<sub>Profile maintained by 3 automated pipelines · last human edit 18 days ago · metrics: 0% success over last 27 runs · $0.00 inference this month (no inference pipelines… yet) · last incident: metrics.yml (2026-06-30, auto-detected, [issue #100](https://github.com/codyaverett/codyaverett/issues/100)) · ledger: <code>git log --format='%h %(trailers:key=Workflow,valueonly)'</code></sub>
-<!-- ops:end -->
-
