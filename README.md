@@ -22,17 +22,17 @@ I love learning and helping others maximize their own potentials.
 ## Featured Projects
 
 <!-- featured:start -->
-### [galaxyclaw](https://github.com/galaxy-gateway/rustyclaw)
+### [galaxyclaw](https://github.com/galaxy-gateway/galaxyclaw)
 Ultra-lightweight personal AI agent framework in Rust. _Stack: rust_
-<sub>last commit 2026-06-30</sub>
+![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/galaxyclaw?style=flat-square&label=updated)
 
 ### [slacker](https://github.com/galaxy-gateway/slacker)
 Chrome extension plus local Rust server that turns Slack web into a queryable feed. _Stack: javascript, rust_
-<sub>last commit 2026-06-19</sub>
+![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/slacker?style=flat-square&label=updated)
 
 ### [metarepo](https://github.com/codyaverett/metarepo)
 Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool. _Stack: rust, cli_
-<sub>last commit 2026-06-12</sub>
+![last commit](https://img.shields.io/github/last-commit/codyaverett/metarepo?style=flat-square&label=updated)
 
 <!-- featured:end -->
 

@@ -44,7 +44,7 @@ stack = "typescript, deno, webrtc"
 
 [[project]]
 name = "galaxyclaw"
-repo = "galaxy-gateway/rustyclaw"
+repo = "galaxy-gateway/galaxyclaw"
 pitch = "Ultra-lightweight personal AI agent framework in Rust."
 stack = "rust"
 
