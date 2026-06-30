@@ -15,13 +15,13 @@ author = "codyaverett"
 [[project]]
 name = "metarepo"
 repo = "codyaverett/metarepo"
-pitch = "Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool."
+pitch = "Manage a fleet of git repositories as one logical project. A fast Rust rewrite of the Node meta tool that runs commands across many repos at once, so multi-repo work stops being a chore."
 stack = "rust, cli"
 
 [[project]]
 name = "mathcraft"
 repo = "galaxy-gateway/mathcraft"
-pitch = "Mathematical concepts as runnable TypeScript examples, foundations to the bleeding edge."
+pitch = "Mathematical concepts rendered as runnable TypeScript, from foundations to the bleeding edge. Learn the math by reading and running real code instead of staring at static formulas."
 stack = "typescript, deno"
 
 [[project]]
@@ -45,31 +45,31 @@ stack = "typescript, deno, webrtc"
 [[project]]
 name = "galaxyclaw"
 repo = "galaxy-gateway/galaxyclaw"
-pitch = "Ultra-lightweight personal AI agent framework in Rust."
+pitch = "A lean, fast personal AI agent framework written in Rust. Run autonomous agents with a tiny footprint and predictable performance, skipping the heavyweight Python stacks entirely."
 stack = "rust"
 
 [[project]]
 name = "slacker"
 repo = "galaxy-gateway/slacker"
-pitch = "Chrome extension plus local Rust server that turns Slack web into a queryable feed."
+pitch = "Turns the Slack web app into a queryable, scriptable feed via a Chrome extension and local Rust server. Search, triage, and automate your channels without the official API or its rate limits."
 stack = "javascript, rust"
 
 [[project]]
 name = "muse"
 repo = "galaxy-gateway/muse"
-pitch = "Terminal music explorer: browse, play, and visualize an audio tree."
+pitch = "A terminal music explorer that browses a directory tree of audio, plays it, and visualizes it in real time. All the joy of a music player without ever leaving your shell."
 stack = "rust, tui"
 
 [[project]]
 name = "tiny-rust"
 repo = "codyaverett/tiny-rust"
-pitch = "Exploring how small a Rust binary can get, one technique at a time."
+pitch = "A hands-on lab for shrinking Rust binaries to the absolute minimum, one technique at a time. A practical reference for anyone who cares about size-optimized, dependency-light builds."
 stack = "rust"
 
 [[project]]
 name = "stable-audio"
 repo = "galaxy-gateway/stable-audio"
-pitch = "Music generation with Stability AI's stable-audio model."
+pitch = "Generate original music locally with Stability AI's stable-audio model. A simple harness that turns text prompts into audio clips on your own machine, no cloud round-trip required."
 stack = "python"
 
 [[project]]

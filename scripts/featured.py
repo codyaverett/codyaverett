@@ -115,12 +115,14 @@ def render(slotted, open_slots, tombstones, window_days):
     if slotted:
         for entry in slotted:
             project, activity = entry["project"], entry
-            lines.append(f"### [{project['name']}](https://github.com/{project['repo']})")
-            lines.append(f"{project['pitch']} _Stack: {project['stack']}_")
-            lines.append(
+            badge = (
                 f"![last commit](https://img.shields.io/github/last-commit/"
                 f"{project['repo']}?style=flat-square&label=updated)"
             )
+            lines.append(
+                f"### [{project['name']}](https://github.com/{project['repo']}) {badge}"
+            )
+            lines.append(f"{project['pitch']} _Stack: {project['stack']}_")
             lines.append("")
         if open_slots:
             plural = "s" if open_slots > 1 else ""
