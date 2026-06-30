@@ -46,6 +46,10 @@ Music generation with Stability AI's stable-audio model. _Stack: python_
 Exploring how small a Rust binary can get, one technique at a time. _Stack: rust_
 ![last commit](https://img.shields.io/github/last-commit/codyaverett/tiny-rust?style=flat-square&label=updated)
 
+### [mathcraft](https://github.com/galaxy-gateway/mathcraft)
+Mathematical concepts as runnable TypeScript examples, foundations to the bleeding edge. _Stack: typescript, deno_
+![last commit](https://img.shields.io/github/last-commit/galaxy-gateway/mathcraft?style=flat-square&label=updated)
+
 <!-- featured:end -->
 
 ## GitHub Stats

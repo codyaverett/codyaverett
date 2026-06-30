@@ -8,7 +8,7 @@
 # Rendering is done by scripts/featured.py, weekly via .github/workflows/decay.yml.
 # Only public repos belong here — private repos 404 for profile visitors.
 
-max_slots = 6
+max_slots = 7
 window_days = 90
 author = "codyaverett"
 
@@ -71,3 +71,9 @@ name = "stable-audio"
 repo = "galaxy-gateway/stable-audio"
 pitch = "Music generation with Stability AI's stable-audio model."
 stack = "python"
+
+[[project]]
+name = "go-links"
+repo = "codyaverett/go-links"
+pitch = "Containerized DNS server that turns memorable shortcuts into go/ links."
+stack = "docker, dns"

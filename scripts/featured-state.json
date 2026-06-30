@@ -5,7 +5,8 @@
     "metarepo",
     "muse",
     "stable-audio",
-    "tiny-rust"
+    "tiny-rust",
+    "mathcraft"
   ],
   "culls": []
 }
