@@ -41,3 +41,33 @@ name = "video-chat"
 repo = "codyaverett/video-chat"
 pitch = "Peer-to-peer WebRTC video chat over WebSockets, served by Deno."
 stack = "typescript, deno, webrtc"
+
+[[project]]
+name = "galaxyclaw"
+repo = "galaxy-gateway/rustyclaw"
+pitch = "Ultra-lightweight personal AI agent framework in Rust."
+stack = "rust"
+
+[[project]]
+name = "slacker"
+repo = "galaxy-gateway/slacker"
+pitch = "Chrome extension plus local Rust server that turns Slack web into a queryable feed."
+stack = "javascript, rust"
+
+[[project]]
+name = "muse"
+repo = "galaxy-gateway/muse"
+pitch = "Terminal music explorer: browse, play, and visualize an audio tree."
+stack = "rust, tui"
+
+[[project]]
+name = "tiny-rust"
+repo = "codyaverett/tiny-rust"
+pitch = "Exploring how small a Rust binary can get, one technique at a time."
+stack = "rust"
+
+[[project]]
+name = "stable-audio"
+repo = "galaxy-gateway/stable-audio"
+pitch = "Music generation with Stability AI's stable-audio model."
+stack = "python"

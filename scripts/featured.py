@@ -117,29 +117,16 @@ def render(slotted, open_slots, tombstones, window_days):
             project, activity = entry["project"], entry
             lines.append(f"### [{project['name']}](https://github.com/{project['repo']})")
             lines.append(f"{project['pitch']} _Stack: {project['stack']}_")
-            lines.append(
-                f"<sub>last commit {activity['last']} · "
-                f"{activity['days_left']} days until cull</sub>"
-            )
+            lines.append(f"<sub>last commit {activity['last']}</sub>")
             lines.append("")
         if open_slots:
             plural = "s" if open_slots > 1 else ""
-            lines.append(f"_{open_slots} slot{plural} open. Slots are earned, not filled._")
+            lines.append(f"_{open_slots} slot{plural} open._")
             lines.append("")
     else:
-        lines.append("_Nothing earning a slot right now — heads-down elsewhere._")
+        lines.append("_Nothing featured right now — heads-down elsewhere._")
         lines.append("")
-    if tombstones:
-        stones = " · ".join(f"~~{t['name']}~~ culled {t['date']}" for t in tombstones)
-        lines.append(f"<sub>{stones}</sub>")
-        lines.append("")
-    lines.append(
-        f"<sub>Max 3 slots. {window_days} days without my commits on the default branch "
-        f"gets a project culled — automatically, in public. "
-        f"Mechanism: [featured.toml](featured.toml) + "
-        f"[decay workflow](.github/workflows/decay.yml).</sub>"
-    )
-    return "\n".join(lines)
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def main():

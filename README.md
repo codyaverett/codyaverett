@@ -22,17 +22,18 @@ I love learning and helping others maximize their own potentials.
 ## Featured Projects
 
 <!-- featured:start -->
+### [galaxyclaw](https://github.com/galaxy-gateway/rustyclaw)
+Ultra-lightweight personal AI agent framework in Rust. _Stack: rust_
+<sub>last commit 2026-06-30</sub>
+
+### [slacker](https://github.com/galaxy-gateway/slacker)
+Chrome extension plus local Rust server that turns Slack web into a queryable feed. _Stack: javascript, rust_
+<sub>last commit 2026-06-19</sub>
+
 ### [metarepo](https://github.com/codyaverett/metarepo)
 Manage fleets of git repos as one logical project. Rust rewrite of the Node meta tool. _Stack: rust, cli_
-<sub>last commit 2026-06-12 · 73 days until cull</sub>
+<sub>last commit 2026-06-12</sub>
 
-### [mathcraft](https://github.com/galaxy-gateway/mathcraft)
-Mathematical concepts as runnable TypeScript examples, foundations to the bleeding edge. _Stack: typescript, deno_
-<sub>last commit 2026-04-12 · 12 days until cull</sub>
-
-_1 slot open. Slots are earned, not filled._
-
-<sub>Max 3 slots. 90 days without my commits on the default branch gets a project culled — automatically, in public. Mechanism: [featured.toml](featured.toml) + [decay workflow](.github/workflows/decay.yml).</sub>
 <!-- featured:end -->
 
 ## GitHub Stats
